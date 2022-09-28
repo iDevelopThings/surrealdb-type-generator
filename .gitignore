@@ -1,3 +1,6 @@
 # Project exclude paths
 /dist/node_modules/
 /node_modules/
+yarn-error.log
+/dist/
+/.idea/
