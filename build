@@ -1,0 +1,8 @@
+vite build --config vite.config.lib.js
+tsc -p tsconfig.lib.json
+
+tsc -p tsconfig.gen.json
+
+cp ./gen/cli ./dist/gen/cli
+cp ./gen/package.json ./dist/gen/package.json
+cp ./package.json ./dist/package.json

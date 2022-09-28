@@ -1,0 +1,28 @@
+{
+  "include": [
+    "./gen/**/*.ts"
+  ],
+  "compilerOptions": {
+    "module": "CommonJS",
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "rootDir": "./gen",
+    "outDir": "./dist/gen",
+    "moduleResolution": "Node",
+    "strict": false,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "declaration": false,
+    "emitDeclarationOnly": false,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "keyofStringsOnly": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

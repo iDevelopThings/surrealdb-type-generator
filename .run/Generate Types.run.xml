@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Generate Types" type="NodeJSConfigurationType" application-parameters="--namespace test --database application --user root --pass secret --host http://0.0.0.0:4269" node-parameters="-r ts-node/register" path-to-js-file="$PROJECT_DIR$/gen/index.ts" working-dir="$PROJECT_DIR$">
+    <method v="2" />
+  </configuration>
+</component>

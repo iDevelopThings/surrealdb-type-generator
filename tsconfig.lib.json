@@ -1,0 +1,31 @@
+{
+  "include": [
+    "./lib/**/*.ts"
+  ],
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "CommonJS",
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "rootDir": "./lib",
+    "outDir": "./dist/lib",
+    "baseUrl": ".",
+    "moduleResolution": "Node",
+    "strict": false,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "skipLibCheck": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "keyofStringsOnly": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

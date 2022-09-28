@@ -1,0 +1,42 @@
+{
+  "name": "surrealdb.types",
+  "description": "Generate surrealdb typescript definitions from your database.",
+  "author": {
+    "name": "iDevelopThings",
+    "url": "https://github.com/idevelopthings"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idevelopthings/surrealdb-type-generator"
+  },
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "sideEffects": false,
+  "main": "lib/index.js",
+  "module": "lib/index.mjs",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*.ts",
+    "lib/**/*.js",
+    "gen/**/*.ts",
+    "gen/**/*.js",
+    "gen/cli"
+  ],
+  "bin": {
+    "surrealdb-types": "gen/cli"
+  },
+  "devDependencies": {
+    "vite": "^3.1.0",
+    "vite-plugin-dts": "^1.5.0",
+    "@types/node": "^18.7.23",
+    "commander": "^9.4.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4",
+    "axios": "^0.27.2"
+  }
+}
