@@ -6,3 +6,4 @@ tsc -p tsconfig.gen.json
 cp ./gen/cli ./dist/gen/cli
 cp ./gen/package.json ./dist/gen/package.json
 cp ./package.json ./dist/package.json
+cp ./readme.md ./dist/readme.md

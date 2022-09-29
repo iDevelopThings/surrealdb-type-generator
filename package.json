@@ -5,11 +5,12 @@
     "name": "iDevelopThings",
     "url": "https://github.com/idevelopthings"
   },
+  "readme": "readme.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/idevelopthings/surrealdb-type-generator"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
