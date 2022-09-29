@@ -53,9 +53,11 @@ surrealdb-types --output ./db-types.d.ts --namespace test --database application
 ## Programmatic usage:
 
 ```typescript 
-import {Generator} from "surrealdb.types/gen"
+import {Generator, Structure, ProcessedStructure} from "surrealdb.types/gen"
+import * as ts from "typescript";
+
 const generator = new Generator({
-    output,
+    output : './myname.d.ts'
     db : {
         namespace: 'test',
         database: 'application',
