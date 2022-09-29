@@ -1,6 +1,7 @@
 export interface ProcessedStructure {
 	name: string;
 	type: string;
+	original_type: string;
 }
 
 export type Structure = {

@@ -11,16 +11,37 @@
     "url": "https://github.com/idevelopthings/surrealdb-type-generator"
   },
   "version": "0.0.2",
-  "type": "module",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "sideEffects": false,
-  "main": "lib/index.js",
-  "module": "lib/index.mjs",
-  "types": "lib/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "lib/index.d.ts"
+      ],
+      "./gen": [
+        "./gen/index.d.ts"
+      ],
+      "./lib": [
+        "./lib/index.d.ts"
+      ]
+    }
+  },
+  "exports": {
+    ".": "lib/index.js",
+    "./gen": {
+      "import": "./gen/index.js",
+      "require": "./gen/index.js"
+    },
+    "./lib": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.js"
+    }
+  },
   "files": [
     "lib/**/*.ts",
     "lib/**/*.js",

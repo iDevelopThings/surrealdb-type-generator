@@ -1,3 +1,4 @@
+import {Generator} from "./generator";
 import {Structure} from "./types";
 
 export function toPascalCase(string) {
@@ -15,14 +16,18 @@ export function toPascalCase(string) {
 
 export function getFieldTsType(field: Structure): string {
 	if (field.type === 'array' && field.sub_type !== null) {
-		return getPrimitiveType(field.type, toPascalCase(extractRecord(field.sub_type)));
+		return getPrimitiveType(field.type, recordType(extractRecord(field.sub_type)));
 	}
 
 	if (field.type.startsWith('record(')) {
-		return toPascalCase(extractRecord(field.type));
+		return recordType(extractRecord(field.type));
 	}
 
 	return getPrimitiveType(field.type);
+}
+
+export function recordType(record: string): string {
+	return `${Generator.config.tableNameFormatterFn(record)}|string`;
 }
 
 export function extractRecord(str: string) {
@@ -51,7 +56,7 @@ export function getPrimitiveType(type: string, generic?: string) {
 		case "time":
 			return "string";
 		case "datetime":
-			return "Date";
+			return "Date|number";
 		case "array" :
 			return generic ? `Array<${generic}>` : "Array<any>";
 		case "object":
@@ -60,3 +65,4 @@ export function getPrimitiveType(type: string, generic?: string) {
 			return "unknown";
 	}
 }
+
