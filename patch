@@ -1,4 +1,4 @@
-npm version patch --dry-run
+npm version patch
 ./build
 cd dist
-npm publish --dry-run
+npm publish
